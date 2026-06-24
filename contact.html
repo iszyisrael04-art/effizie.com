@@ -221,6 +221,52 @@ button:hover{
     background:#e63c8d;
 }
 
+/* Loading Screen */
+#loadingScreen{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.85);
+
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    z-index:9999;
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+
+    border:6px solid rgba(255,255,255,0.2);
+    border-top:6px solid #ff4fa3;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+}
+
+#loadingScreen p{
+    margin-top:20px;
+    color:white;
+    font-size:18px;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -298,44 +344,57 @@ footer{
     <!-- FORM -->
     <div class="box">
         <h2>Send a Message</h2>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+     <form
+    action="https://formspree.io/f/mpqgwvdk"
+    method="POST"
+    target="hidden_iframe"
+    onsubmit="redirectThankYou()"
+    class="contact-form">
 
-     <form action="https://formspree.io/f/mpqgwvdk" method="POST" class="contact-form">
+    <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required>
 
-    <input type="text"
-           name="name"
-           placeholder="Full Name"
-           required>
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
 
-    <input type="email"
-           name="email"
-           placeholder="Email Address"
-           required>
-
-    <input type="tel"
-           name="phone"
-           placeholder="Phone Number"
-           required>
+    <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        required>
 
     <label>Check-In Date</label>
-    <input type="date" name="checkin">
+    <input
+        type="date"
+        name="checkin">
 
     <label>Check-Out Date</label>
-    <input type="date" name="checkout">
+    <input
+        type="date"
+        name="checkout">
 
     <textarea
         name="message"
         placeholder="Tell us about your stay requirements"></textarea>
-
-    <input
-        type="hidden"
-        name="_next"
-        value="thankyou.html">
 
     <button type="submit">
         Request Reservation
     </button>
 
 </form>
+
+    <div id="loadingScreen">
+        <div class="spinner"></div>
+        <p>Sending your request...</p>
+    </div>
+
     </div>
 
 </section>
@@ -346,6 +405,20 @@ function toggleMenu(){
     document.querySelector(".overlay").classList.toggle("active");
 }
 </script>
+
+<script>
+document.querySelector(".contact-form")
+.addEventListener("submit", function(){
+
+    document.getElementById("loadingScreen").style.display = "flex";
+
+    setTimeout(function(){
+        window.location.href = "thankyou.html";
+    }, 1500);
+
+});
+</script>
+
 
 <!-- FOOTER -->
 <footer>
