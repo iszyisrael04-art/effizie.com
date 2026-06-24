@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Effizie Hotel offers luxury rooms, comfort, and premium hospitality in Nigeria. Book your stay today.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Effizie Hotel | Luxury & Comfort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- NAVBAR -->
+<header>
+
+    <div class="logo">
+        <img src="logo.png" alt="Effizie Hotel Logo">
+        <span>EFFIZIE HOTEL</span>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="overlay" onclick="toggleMenu()"></div>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Luxury Meets Comfort</h1>
+            <p>
+                Experience world-class hospitality, elegant rooms,
+                and unforgettable moments at Effizie Hotel.
+            </p>
+
+            <a href="rooms.html" class="btn">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>Welcome To Effizie Hotel</h2>
+
+        <p>
+            At Effizie Hotel, we provide exceptional accommodation,
+            premium service, and a relaxing atmosphere for business
+            travelers, tourists, families, and guests seeking comfort.
+            Every stay is designed to deliver elegance, convenience,
+            and unforgettable hospitality.
+        </p>
+    </section>
+
+    <!-- ROOMS -->
+    <section class="rooms">
+        <h2>Featured Rooms</h2>
+
+        <div class="room-container">
+
+            <div class="room">
+                <img src="assets/room 1.jpg" alt="Standard Room">
+
+                <h3>Standard Room</h3>
+
+                <p>
+                    Stylish accommodation with modern amenities,
+                    air conditioning, and free Wi-Fi.
+                </p>
+
+                <button>View Details</button>
+            </div>
+
+            <div class="room">
+                <img src="assets/room 2.jpg" alt="Deluxe Room">
+
+                <h3>Deluxe Room</h3>
+
+                <p>
+                    Spacious luxury room with premium comfort
+                    and beautiful interior design.
+                </p>
+
+                <button>View Details</button>
+            </div>
+
+            <div class="room">
+                <img src="assets/room 3.jpg" alt="Executive Suite">
+
+                <h3>Executive Suite</h3>
+
+                <p>
+                    Our finest suite offering elegance,
+                    privacy, and a superior guest experience.
+                </p>
+
+                <button>View Details</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="about">
+        <h2>Why Choose Us?</h2>
+
+        <p>
+            ✓ Luxury Rooms<br><br>
+            ✓ Free High-Speed Wi-Fi<br><br>
+            ✓ 24/7 Customer Service<br><br>
+            ✓ Restaurant & Lounge<br><br>
+            ✓ Secure Parking<br><br>
+            ✓ Event & Conference Facilities
+        </p>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="rooms">
+
+        <h2>Guest Reviews</h2>
+
+        <div class="room-container">
+
+            <div class="room">
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    "Amazing hospitality and beautiful rooms.
+                    I highly recommend Effizie Hotel."
+                </p>
+            </div>
+
+            <div class="room">
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    "Excellent service and a relaxing atmosphere.
+                    Definitely coming back."
+                </p>
+            </div>
+
+            <div class="room">
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    "One of the best hotel experiences I've had.
+                    Clean, secure, and luxurious."
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="about">
+
+        <h2>Ready For Your Next Stay?</h2>
+
+        <p>
+            Book your room today and enjoy comfort,
+            luxury, and exceptional hospitality.
+        </p>
+
+        <br>
+
+        <a href="contact.html" class="btn">
+            Contact Us
+        </a>
+
+    </section>
+    <a href="https://wa.me/+2348032976281" class="whatsapp-float" target="_blank">
+    💬
+</a>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+    document.querySelector(".overlay").classList.toggle("active");
+}
+</script>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Effizie Hotel. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
