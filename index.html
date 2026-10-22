@@ -1,199 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Effizie Hotel offers luxury rooms, comfort, and premium hospitality in Nigeria. Book your stay today.">
-    <link rel="icon" type="image/png" href="logo.png">
-    <title>Effizie Hotel | Luxury & Comfort</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover Effizie Hotel in Ogun State, Nigeria. Explore our rooms, lounge and hotel photos, and enquire directly about your next stay.">
+<meta name="theme-color" content="#0b090c">
+<title>A warm welcome in Ogun State | Effizie Hotel</title>
+<link rel="icon" href="assets/effizie-logo.jpg" type="image/jpeg">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="scripts.js">
+</script>
 </head>
 <body>
-
- <!-- NAVBAR -->
-<header>
-
-    <div class="logo">
-        <img src="logo.png" alt="Effizie Hotel Logo">
-        <span>EFFIZIE HOTEL</span>
-    </div>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <div class="overlay" onclick="toggleMenu()"></div>
-
-    <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="rooms.html">Rooms</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-</header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Luxury Meets Comfort</h1>
-            <p>
-                Experience world-class hospitality, elegant rooms,
-                and unforgettable moments at Effizie Hotel.
-            </p>
-
-            <a href="rooms.html" class="btn">Book Your Stay</a>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>Welcome To Effizie Hotel</h2>
-
-        <p>
-            At Effizie Hotel, we provide exceptional accommodation,
-            premium service, and a relaxing atmosphere for business
-            travelers, tourists, families, and guests seeking comfort.
-            Every stay is designed to deliver elegance, convenience,
-            and unforgettable hospitality.
-        </p>
-    </section>
-
-    <!-- ROOMS -->
-    <section class="rooms">
-        <h2>Featured Rooms</h2>
-
-        <div class="room-container">
-
-            <div class="room">
-                <img src="assets/room 1.jpg" alt="Standard Room">
-
-                <h3>Standard Room</h3>
-
-                <p>
-                    Stylish accommodation with modern amenities,
-                    air conditioning, and free Wi-Fi.
-                </p>
-
-                <button>View Details</button>
-            </div>
-
-            <div class="room">
-                <img src="assets/room 2.jpg" alt="Deluxe Room">
-
-                <h3>Deluxe Room</h3>
-
-                <p>
-                    Spacious luxury room with premium comfort
-                    and beautiful interior design.
-                </p>
-
-                <button>View Details</button>
-            </div>
-
-            <div class="room">
-                <img src="assets/room 3.jpg" alt="Executive Suite">
-
-                <h3>Executive Suite</h3>
-
-                <p>
-                    Our finest suite offering elegance,
-                    privacy, and a superior guest experience.
-                </p>
-
-                <button>View Details</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- AMENITIES -->
-    <section class="about">
-        <h2>Why Choose Us?</h2>
-
-        <p>
-            ✓ Luxury Rooms<br><br>
-            ✓ Free High-Speed Wi-Fi<br><br>
-            ✓ 24/7 Customer Service<br><br>
-            ✓ Restaurant & Lounge<br><br>
-            ✓ Secure Parking<br><br>
-            ✓ Event & Conference Facilities
-        </p>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="rooms">
-
-        <h2>Guest Reviews</h2>
-
-        <div class="room-container">
-
-            <div class="room">
-                <h3>⭐⭐⭐⭐⭐</h3>
-
-                <p>
-                    "Amazing hospitality and beautiful rooms.
-                    I highly recommend Effizie Hotel."
-                </p>
-            </div>
-
-            <div class="room">
-                <h3>⭐⭐⭐⭐⭐</h3>
-
-                <p>
-                    "Excellent service and a relaxing atmosphere.
-                    Definitely coming back."
-                </p>
-            </div>
-
-            <div class="room">
-                <h3>⭐⭐⭐⭐⭐</h3>
-
-                <p>
-                    "One of the best hotel experiences I've had.
-                    Clean, secure, and luxurious."
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CALL TO ACTION -->
-    <section class="about">
-
-        <h2>Ready For Your Next Stay?</h2>
-
-        <p>
-            Book your room today and enjoy comfort,
-            luxury, and exceptional hospitality.
-        </p>
-
-        <br>
-
-        <a href="contact.html" class="btn">
-            Contact Us
-        </a>
-
-    </section>
-    <a href="https://wa.me/+2348032976281" class="whatsapp-float" target="_blank">
-    💬
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html" aria-label="Effizie Hotel home">
+<img src="assets/effizie-logo.jpg" alt="Effizie Hotel" width="1536" height="1024">
 </a>
-
-<script>
-function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("active");
-    document.querySelector(".overlay").classList.toggle("active");
-}
-</script>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>
-            © 2026 Effizie Hotel. All Rights Reserved.
-        </p>
-    </footer>
-
+<button class="menu-toggle icon-button" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 7h16M4 12h16M4 17h16"/>
+</svg>
+</button>
+<nav id="navMenu" aria-label="Main navigation">
+<a href="index.html" aria-current="page">Home</a>
+<a href="rooms.html">Rooms & suites</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">Our story</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero">
+<img class="hero-photo" src="assets/room%205.jpg" alt="Effizie Hotel bedroom with a seating area and warm lighting" width="1080" height="810" fetchpriority="high">
+<div class="hero-shade">
+</div>
+<div class="container hero-content">
+<p class="eyebrow">EFFIZIE HOTEL · OGUN STATE, NIGERIA</p>
+<h1>Find your<br>place to <em>unwind.</em>
+</h1>
+<p>Thoughtful spaces. A warm welcome.<br>A stay that feels a little more like you.</p>
+<a class="button" href="rooms.html">Discover our rooms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+<a class="hero-caption" href="gallery.html">A CLOSER LOOK AT EFFIZIE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</section>
+<div class="container booking-wrap">
+<form class="booking-bar" action="contact.html" method="get">
+<div class="booking-label">
+<span class="eyebrow">MAKE YOURSELF AT HOME</span>
+<h2>Plan your stay</h2>
+</div>
+<label>Check-in<input type="date" name="checkin" required>
+</label>
+<label>Check-out<input type="date" name="checkout" required>
+</label>
+<label>Guests<select name="guests">
+<option value="1">1 guest</option>
+<option value="2" selected>2 guests</option>
+<option value="3">3 guests</option>
+<option value="4">4 guests</option>
+<option value="5+">5+ guests</option>
+</select>
+</label>
+<button class="button" type="submit">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</button>
+</form>
+</div>
+<section class="section container welcome">
+<div class="welcome-visual">
+<img src="assets/H%20lobby.png" alt="The glass-fronted entrance to Effizie Hotel" width="1672" height="941" loading="lazy">
+<span class="photo-note">A warm welcome awaits.</span>
+</div>
+<div class="welcome-copy">
+<p class="eyebrow">WELCOME TO EFFIZIE</p>
+<h2>A little escape.<br>A lasting impression.</h2>
+<p>Whether you’re travelling for work, taking a break, or visiting loved ones, make yourself comfortable at Effizie Hotel.</p>
+<p>From your first hello at reception to a quiet moment in your room, we’re here to make your stay feel easy.</p>
+<a class="text-link" href="about.html">Get to know us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="section rooms-section">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">REST, YOUR WAY</p>
+<h2>Room to feel at home.</h2>
+</div>
+<a class="text-link" href="rooms.html">View all rooms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+<div class="room-grid">
+<article class="room-card" id="standard">
+<a class="room-image" href="contact.html?room=standard" aria-label="Enquire about the Standard Room">
+<img src="assets/room%201.jpg" alt="Standard Room at Effizie Hotel" width="1080" height="810" loading="lazy">
+<span>EXPLORE YOUR STAY <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</span>
+</a>
+<div class="room-copy">
+<div class="room-heading">
+<h3>Standard Room</h3>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 18v-7h18v7M3 15h18M5 11V6h14v5M8 8h3v3m2-3h3v3M3 18v2m18-2v2"/>
+</svg>
+</div>
+<p>A comfortable place to unwind after a busy day.</p>
+<div class="room-bottom">
+<p class="price">₦25,000<span> / night</span>
+</p>
+<a class="text-link" href="contact.html?room=standard">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="room-card" id="deluxe">
+<a class="room-image" href="contact.html?room=deluxe" aria-label="Enquire about the Deluxe Room">
+<img src="assets/room%202.jpg" alt="Deluxe Room at Effizie Hotel" width="1080" height="810" loading="lazy">
+<span>EXPLORE YOUR STAY <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</span>
+</a>
+<div class="room-copy">
+<div class="room-heading">
+<h3>Deluxe Room</h3>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 18v-7h18v7M3 15h18M5 11V6h14v5M8 8h3v3m2-3h3v3M3 18v2m18-2v2"/>
+</svg>
+</div>
+<p>A little more space to settle in and make yourself at home.</p>
+<div class="room-bottom">
+<p class="price">₦40,000<span> / night</span>
+</p>
+<a class="text-link" href="contact.html?room=deluxe">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="room-card" id="executive">
+<a class="room-image" href="contact.html?room=executive" aria-label="Enquire about the Executive Suite">
+<img src="assets/room%203.jpg" alt="Executive Suite at Effizie Hotel" width="1080" height="810" loading="lazy">
+<span>EXPLORE YOUR STAY <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</span>
+</a>
+<div class="room-copy">
+<div class="room-heading">
+<h3>Executive Suite</h3>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 18v-7h18v7M3 15h18M5 11V6h14v5M8 8h3v3m2-3h3v3M3 18v2m18-2v2"/>
+</svg>
+</div>
+<p>Space to slow down, relax, and enjoy your own company.</p>
+<div class="room-bottom">
+<p class="price">₦60,000<span> / night</span>
+</p>
+<a class="text-link" href="contact.html?room=executive">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+<p class="fine-print">Displayed rates are subject to confirmation. Contact our team for current pricing and availability.</p>
+</div>
+</section>
+<section class="section container experience">
+<div class="experience-copy">
+<p class="eyebrow">BEYOND YOUR ROOM</p>
+<h2>Good company.<br>Unhurried evenings.</h2>
+<p>Catch up, wind down, or simply enjoy a change of pace in our bar and lounge.</p>
+<a class="text-link" href="gallery.html">Explore the hotel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<div class="service-list">
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 16a6 6 0 0 1 8 0"/>
+<circle cx="12" cy="20" r="1"/>
+</svg>
+<span>Complimentary Wi-Fi</span>
+</div>
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 17h18M5 15a7 7 0 0 1 14 0M12 5v3M10 5h4M2 20h20"/>
+</svg>
+<span>Restaurant & lounge</span>
+</div>
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 18v-7h18v7M3 15h18M5 11V6h14v5M8 8h3v3m2-3h3v3M3 18v2m18-2v2"/>
+</svg>
+<span>Comfortable rooms</span>
+</div>
+</div>
+</div>
+<div class="experience-photo">
+<img src="assets/bar.jpg" alt="Effizie Hotel bar and lounge with evening lighting" width="810" height="1080" loading="lazy">
+<span>STAY IN. SETTLE IN.</span>
+</div>
+</section>
+<section class="stay-cta">
+<div class="container">
+<div>
+<p class="eyebrow">YOUR NEXT STAY STARTS HERE</p>
+<h2>We’ll make room for you.</h2>
+<p>Tell us your dates. Our team will help with the rest.</p>
+</div>
+<a class="button button-light" href="contact.html">Enquire about a stay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<a class="brand footer-brand" href="index.html" aria-label="Effizie Hotel home">
+<img src="assets/effizie-logo.jpg" alt="Effizie Hotel" width="1536" height="1024" loading="lazy">
+</a>
+<p>A welcoming place to stay.<br>Ogun State, Nigeria.</p>
+</div>
+<div>
+<h2>Explore</h2>
+<a href="rooms.html">Rooms & suites</a>
+<a href="gallery.html">Hotel gallery</a>
+<a href="about.html">Our story</a>
+</div>
+<div>
+<h2>Let’s plan your stay</h2>
+<a href="tel:+2348032976281">+234 803 297 6281</a>
+<a href="mailto:info@effiziehotel.com">info@effiziehotel.com</a>
+<a href="https://wa.me/2348032976281" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© <span data-year>2026</span> Effizie Hotel. All rights reserved.</span>
+<span>Stay a little. Feel at home.</span>
+</div>
+</footer>
 </body>
 </html>

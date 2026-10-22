@@ -1,429 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Effizie Hotel offers luxury rooms, comfort, and premium hospitality in Nigeria. Book your stay today.">
-<link rel="icon" type="image/png" href="logo.png">
-<title>Contact | Effizie Hotel</title>
-
-<style>
-/* =========================
-   GLOBAL
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#111;
-    color:#fff;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:#ff4fa3;
-    position:sticky;
-    top:0;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo img{
-    width:70px;
-    height:70px;
-    object-fit:contain;
-    border-radius:10px;
-}
-
-.logo span{
-    color:#000000;
-    font-size:1.5rem;
-    font-weight:bold;
-    font-family: "sacremento", cursive;
-}
-
-nav a{
-    color: black;
-    text-decoration:none;
-    margin-left:15px;
-}
-
-nav a:hover{
-    color:#fac0c0;
-}
-
-.hamburger{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
-    color:#000000;
-    z-index: 1100;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .hamburger{
-        display:block;
-    }
-
-    nav{
-        position:fixed;
-        top:0;
-        right:-260px;
-
-        width:250px;
-        height:100vh;
-
-        background:#ff4fa3;
-
-        display:flex;              /* IMPORTANT */
-        flex-direction:column;     /* IMPORTANT */
-
-        z-index: 1000;
-
-        padding:80px 20px;
-        gap:20px;                  /* spacing between links */
-
-        box-shadow:-5px 0 20px rgba(0,0,0,0.2);
-
-        transition:0.4s ease;
-    }
-
-    nav a{
-        color:#111;
-        font-size:18px;
-
-        padding:12px 10px;
-        border-bottom:1px solid rgba(255,255,255,0.3);
-    }
-
-    nav.active{
-        right:0;
-    }
-}
-
-.overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.5);
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:0.3s;
-    z-index:900;
-}
-
-.overlay.active{
-    opacity:1;
-    visibility:visible;
-}
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    height:35vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-    url("assets/contact.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.hero h1{
-    color:#ff4fa3;
-    font-size:3rem;
-}
-
-/* =========================
-   CONTACT SECTION
-========================= */
-
-.contact{
-    padding:60px 8%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.box{
-    background:#1c1c1c;
-    padding:30px;
-    border-radius:10px;
-}
-
-.box h2{
-    color:#ff4fa3;
-    margin-bottom:20px;
-}
-
-.box p{
-    margin-bottom:10px;
-}
-
-/* FORM */
-
-form input,
-form textarea{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:5px;
-    outline:none;
-}
-
-form textarea{
-    height:120px;
-    resize:none;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:#ff4fa3;
-    color:white;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-button:hover{
-    background:#e63c8d;
-}
-
-/* Loading Screen */
-#loadingScreen{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.85);
-
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-
-    z-index:9999;
-}
-
-.spinner{
-    width:60px;
-    height:60px;
-
-    border:6px solid rgba(255,255,255,0.2);
-    border-top:6px solid #ff4fa3;
-
-    border-radius:50%;
-
-    animation:spin 1s linear infinite;
-}
-
-#loadingScreen p{
-    margin-top:20px;
-    color:white;
-    font-size:18px;
-}
-
-@keyframes spin{
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
-    }
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:black;
-    margin-top:40px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-    .contact{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:2rem;
-    }
-}
-</style>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Contact Effizie Hotel in Ogun State. Call, message on WhatsApp, or send a reservation enquiry to our team.">
+<meta name="theme-color" content="#0b090c">
+<title>Plan your stay | Effizie Hotel</title>
+<link rel="icon" href="assets/effizie-logo.jpg" type="image/jpeg">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="scripts.js">
+</script>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-    <header>
-        <div class="logo">
-    <img src="logo.png" alt="Effizie Hotel Logo">
-    <span>EFFIZIE HOTEL</span>
-    </div>
-          <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
-    <div class="overlay" onclick="toggleMenu()"></div>
-        <nav id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="rooms.html">Rooms</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>Contact Us</h1>
-</section>
-
-<!-- CONTACT SECTION -->
-<section class="contact">
-
-    <!-- INFO -->
-    <div class="box">
-        <h2>Get In Touch</h2>
-
-        <p>📍 Location: Ogun state, Nigeria</p>
-        <p>📞 Phone: +234 803 297 6281</p>
-        <p>📧 Email: info@effiziehotel.com</p>
-        <p>💬 WhatsApp: +234 803 297 6281</p>
-
-        <br>
-
-        <p>
-            We are available 24/7 to help you book rooms,
-            answer questions, and assist your stay.
-        </p>
-    </div>
-
-    <!-- FORM -->
-    <div class="box">
-        <h2>Send a Message</h2>
-      <iframe name="hidden_iframe" style="display:none;"></iframe>
-     <form
-    action="https://formspree.io/f/mpqgwvdk"
-    method="POST"
-    target="hidden_iframe"
-    onsubmit="redirectThankYou()"
-    class="contact-form">
-
-    <input
-        type="text"
-        name="name"
-        placeholder="Full Name"
-        required>
-
-    <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required>
-
-    <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        required>
-
-    <label>Check-In Date</label>
-    <input
-        type="date"
-        name="checkin">
-
-    <label>Check-Out Date</label>
-    <input
-        type="date"
-        name="checkout">
-
-    <textarea
-        name="message"
-        placeholder="Tell us about your stay requirements"></textarea>
-
-    <button type="submit">
-        Request Reservation
-    </button>
-
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html" aria-label="Effizie Hotel home">
+<img src="assets/effizie-logo.jpg" alt="Effizie Hotel" width="1536" height="1024">
+</a>
+<button class="menu-toggle icon-button" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 7h16M4 12h16M4 17h16"/>
+</svg>
+</button>
+<nav id="navMenu" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="rooms.html">Rooms & suites</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">Our story</a>
+<a href="contact.html" aria-current="page">Contact</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="page-intro container">
+<p class="eyebrow">LET’S MAKE PLANS</p>
+<h1>Your stay starts with a hello.</h1>
+<p class="lede">Share your plans with us. We’ll help you find the right room for your visit.</p>
+</div>
+<section class="container contact-layout">
+<aside class="contact-details">
+<p class="eyebrow">GET IN TOUCH</p>
+<h2>We’re here to help.</h2>
+<p>Ask about a room, arrange your stay, or let us know what you need.</p>
+<div class="contact-line">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m8 3 2 5-3 2a16 16 0 0 0 7 7l2-3 5 2c0 4-2 5-4 5A18 18 0 0 1 3 7c0-2 1-4 5-4Z"/>
+</svg>
+<div>
+<h3>Call our team</h3>
+<a href="tel:+2348032976281">+234 803 297 6281</a>
+</div>
+</div>
+<div class="contact-line">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<rect x="3" y="5" width="18" height="14" rx="2"/>
+<path d="m3 6 9 7 9-7"/>
+</svg>
+<div>
+<h3>Email us</h3>
+<a href="mailto:info@effiziehotel.com">info@effiziehotel.com</a>
+</div>
+</div>
+<div class="contact-line">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/>
+<circle cx="12" cy="10" r="2.5"/>
+</svg>
+<div>
+<h3>Visit Effizie</h3>
+<p>Ogun State, Nigeria</p>
+<a class="text-link" href="https://wa.me/2348032976281?text=Hello%20Effizie%2C%20please%20send%20your%20exact%20location%20and%20directions." target="_blank" rel="noopener noreferrer">Ask for directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</div>
+<a class="button button-outline" href="https://wa.me/2348032976281" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<img class="contact-photo" src="assets/H%20lobby.png" alt="Effizie Hotel entrance" width="1672" height="941" loading="lazy">
+</aside>
+<div class="form-panel">
+<h2>Tell us about your stay</h2>
+<p>Send an enquiry. Our team will confirm availability and rates with you.</p>
+<form class="contact-form" action="https://formspree.io/f/mpqgwvdk" method="post">
+<div class="form-grid">
+<label>Full name <span aria-hidden="true">*</span>
+<input name="name" autocomplete="name" required maxlength="120" placeholder="Your full name">
+</label>
+<label>Email address <span aria-hidden="true">*</span>
+<input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+</label>
+<label>Phone number <span aria-hidden="true">*</span>
+<input type="tel" name="phone" autocomplete="tel" required maxlength="40" placeholder="+234 …">
+</label>
+<label>Room preference<select name="room">
+<option value="any">Help me choose</option value="standard">Standard Room</option>
+<option value="deluxe">Deluxe Room</option>
+<option value="executive">Executive Suite</option>
+</select>
+</label>
+<label>Check-in<input type="date" name="checkin">
+</label>
+<label>Check-out<input type="date" name="checkout">
+</label>
+<label>Guests<select name="guests">
+<option value="1">1 guest</option>
+<option value="2" selected>2 guests</option>
+<option value="3">3 guests</option>
+<option value="4">4 guests</option>
+<option value="5+">5+ guests</option>
+</select>
+</label>
+<label class="full-width">How can we help?<textarea name="message" rows="4" maxlength="5000" placeholder="Your plans, questions, or anything that would make your stay more comfortable…">
+</textarea>
+</label>
+</div>
+<p class="form-note">Your details will be used to respond to this enquiry. The form is processed by Formspree. Please don’t include payment information.</p>
+<button class="button" type="submit">Send enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</button>
+<p class="form-status" role="status" aria-live="polite">
+</p>
+<noscript>
+<p>After submitting, follow the form provider’s confirmation. You can also call or WhatsApp our team.</p>
+</noscript>
 </form>
-
-    <div id="loadingScreen">
-        <div class="spinner"></div>
-        <p>Sending your request...</p>
-    </div>
-
-    </div>
-
+</div>
 </section>
-
-        <script>
-function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("active");
-    document.querySelector(".overlay").classList.toggle("active");
-}
-</script>
-
-<script>
-document.querySelector(".contact-form")
-.addEventListener("submit", function(){
-
-    document.getElementById("loadingScreen").style.display = "flex";
-
-    setTimeout(function(){
-        window.location.href = "thankyou.html";
-    }, 1500);
-
-});
-</script>
-
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Effizie Hotel. All Rights Reserved.</p>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<a class="brand footer-brand" href="index.html" aria-label="Effizie Hotel home">
+<img src="assets/effizie-logo.jpg" alt="Effizie Hotel" width="1536" height="1024" loading="lazy">
+</a>
+<p>A welcoming place to stay.<br>Ogun State, Nigeria.</p>
+</div>
+<div>
+<h2>Explore</h2>
+<a href="rooms.html">Rooms & suites</a>
+<a href="gallery.html">Hotel gallery</a>
+<a href="about.html">Our story</a>
+</div>
+<div>
+<h2>Let’s plan your stay</h2>
+<a href="tel:+2348032976281">+234 803 297 6281</a>
+<a href="mailto:info@effiziehotel.com">info@effiziehotel.com</a>
+<a href="https://wa.me/2348032976281" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© <span data-year>2026</span> Effizie Hotel. All rights reserved.</span>
+<span>Stay a little. Feel at home.</span>
+</div>
 </footer>
-
 </body>
 </html>
